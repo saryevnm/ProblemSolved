@@ -18,9 +18,9 @@ public class Main {
             , {1, 50}
             , {2, 20}
             , {3, 10}
-            , {5, 5}
-            , {5, 3}
-            , {10, 1}};
+            , {0, 5}
+            , {0, 3}
+            , {0, 1}};
 
     public static void main(String[] args) {
 
@@ -47,7 +47,7 @@ public class Main {
                     progress = progress + bill[1];
                     bill[0]--;
                     count++;
-                } else if (or > progress + bill[1] && progress + bill[1] < sum) {
+                } else if (or > progress + bill[1]) {
                     or = progress + bill[1];
                     break;
                 } else if (progress == input) {
