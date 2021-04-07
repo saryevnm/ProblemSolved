@@ -15,15 +15,17 @@ public class SumOfOnes {
     private static void printCompute(int input,StringBuilder printResult) {
         int count = 0;
         int i =1;
-        while (count<=input){
-            if (count==input){
+        int sum = 0;
+        while (count<input){
+            if (count==input-1){
                 printResult.append(i);
             }else{
                 printResult.append(i).append(" + ");
             }
+            sum = sum+i;
             count++;
             i = i*10+1;
         }
-        System.out.println("Результат: \n"+printResult);
+        System.out.println("Результат: \n"+printResult+"\n"+"Сумма: "+sum);
     }
 }
