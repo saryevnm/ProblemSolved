@@ -18,9 +18,9 @@ public class Main {
             , {1, 50}
             , {2, 20}
             , {3, 10}
-            , {0, 5}
-            , {0, 3}
-            , {0, 1}};
+            , {5, 5}
+            , {5, 3}
+            , {10, 1}};
 
     public static void main(String[] args) {
 
@@ -30,7 +30,8 @@ public class Main {
         print(input);
 
     }
-    private static void print(int input){
+
+    private static void print(int input) {
         if (progress != input) {
             if (progress == sum) {
                 System.out.println("Вы можете снять только " + progress);
@@ -39,7 +40,8 @@ public class Main {
             }
         }
     }
-    private static void check(int input){
+
+    private static void check(int input) {
         for (int[] bill : banknotes) {
             sum = sum + (bill[0] * bill[1]);
             while (bill[0] > 0) {
@@ -58,11 +60,7 @@ public class Main {
                 } else break;
             }
             if (0 < count) {
-                if (bill[1] <= 10) {
-                    resultPrint.append("x ").append(bill[1]).append(" ");
-                } else {
-                    resultPrint.append(count).append(" x ").append(bill[1]).append(" ");
-                }
+                resultPrint.append(count).append(" x ").append(bill[1]).append(" ");
             }
             if (progress == input) {
                 System.out.println(resultPrint + " Всего = " + progress);
@@ -115,7 +113,7 @@ public class Main {
                            BREAK
                      ELSE IF or = 0
                        THEN
-                           or <- progress + first itme of bill
+                           or <- progress + first item of bill
                            BREAK
                      ELSE  BREAK
 
